@@ -1,0 +1,69 @@
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Productos Chamomango</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: Arial, sans-serif;
+      background-color: #000; /* fondo negro para que se note si sobra espacio */
+    }
+    .contenedor {
+      position: relative;
+      width: 100%;
+      height: 100vh; /* ocupa toda la altura de la ventana */
+      overflow: hidden;
+    }
+    .contenedor img {
+      width: 100%;
+      height: 100%;
+      object-fit: contain; /* muestra la imagen completa sin recortes */
+      display: block;
+    }
+    .boton {
+      position: absolute;
+      background-color: rgba(255, 255, 255, 0.85);
+      border: 3px solid #d35400;
+      padding: 25px 40px; /* botones más grandes */
+      border-radius: 10px;
+      cursor: pointer;
+      font-weight: bold;
+      font-size: 24px; /* texto más grande */
+      transition: transform 0.2s;
+    }
+    .boton:hover {
+      transform: scale(1.2);
+      background-color: rgba(255, 200, 100, 0.95);
+    }
+  </style>
+</head>
+<body>
+  <div class="contenedor">
+    <img src="menu.jpg" alt="Menú Chamomango">
+
+    <!-- Botones flotando sobre la imagen -->
+    <button class="boton" style="top:20%; left:10%;" onclick="comprar('Chamomango con Bacardí')">
+      Chamomango con Bacardí
+    </button>
+    <button class="boton" style="top:40%; left:15%;" onclick="comprar('Charola de Jicagomitas')">
+      Charola de Jicagomitas
+    </button>
+    <button class="boton" style="top:60%; left:20%;" onclick="comprar('Chamofresa')">
+      Chamofresa
+    </button>
+    <button class="boton" style="top:80%; left:25%;" onclick="comprar('Chamomango Clásica')">
+      Chamomango Clásica
+    </button>
+  </div>
+
+  <script>
+    function comprar(producto) {
+      alert("Has seleccionado: " + producto + ". Procediendo a compra...");
+      // Aquí puedes integrar carrito o redirección a página de pago
+    }
+  </script>
+</body>
+</html>
